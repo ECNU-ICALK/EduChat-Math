@@ -1,8 +1,7 @@
 # EduChat-MATH
 
 ## Introduction
-
-We release the Chinese Multimodal Mathemathical Dataset (CMM-Math), which contains 22k+ training samples and 5k+ evaluation samples. 
+Large language models (LLMs) have obtained promising results in mathematical reasoning, which is a foundational skill for human intelligence. Most previous studies focus on improving and measuring the performance of LLMs based on textual math reasoning datasets (e.g., MATH, GSM8K). Recently, a few researchers have released English multimodal math datasets (e.g., MATHVISTA and MATH-V) to evaluate the effectiveness of large multimodal models (LMMs). In this paper, we release a Chinese multimodal math (CMM-Math) dataset, including benchmark and training parts, to evaluate and enhance the mathematical reasoning of LMMs. CMM-Math contains over 28,000 high-quality samples, featuring a variety of problem types (e.g., multiple-choice, fill-in-the-blank, and so on) with detailed solutions across 12 grade levels from elementary to high school in China. Specifically, the visual context may be present in the questions or opinions, which makes this dataset more challenging. Through comprehensive analysis, we discover that state-of-the-art LMMs on the CMM-Math dataset face challenges, emphasizing the necessity for further improvements in LMM development. We release the Chinese Multimodal Mathemathical Dataset (CMM-Math), which contains 22k+ training samples and 5k+ evaluation samples.
 
 Paper link: https://arxiv.org/pdf/2409.02834
 ```
