@@ -20,7 +20,7 @@ GOOGLE_API_KEY = ""
 
 genai.configure(api_key=GOOGLE_API_KEY, transport='rest')
 
-image_path_root = "./images"
+image_path_root = "./images/test_Images"
 
 
 def timestamp() -> str:
