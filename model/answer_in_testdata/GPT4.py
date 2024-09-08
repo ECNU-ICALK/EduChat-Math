@@ -58,7 +58,7 @@ def ask_gpt4(question, image_paths):
     return chat_completion.model_dump()
 
 
-def process_example(example, img_folder='./images'):
+def process_example(example, img_folder='./images/test_Images'):
     question = geninput(example)
     image_paths = []
 
