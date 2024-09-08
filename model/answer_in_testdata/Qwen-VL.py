@@ -58,7 +58,7 @@ def ask_qwvl(question, image_paths):
 
 
 # Define the function to process each example
-def process_example_merged_img(example, img_folder="./images"):
+def process_example_merged_img(example, img_folder="./images/test_Images"):
     input = geninput(example)
 
     image_paths = []
