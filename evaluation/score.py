@@ -5,7 +5,7 @@ import re
 from utils import timestamp, save_jsonl, load_jsonl, find_math_answer, is_equal, is_number
 
 id_raw = {example['id']: example for example in load_jsonl(r"./data/test_data.jsonl")}
-tishi = ['模型A', '模型B', '模型C', '模型D', '模型E', '模型F',
+Model = ['模型A', '模型B', '模型C', '模型D', '模型E', '模型F',
          '模型G', '模型H', '模型I', '模型J', '模型K', '模型L']
 model_name = ['cogvlm_common', 'cogvlm_shot', 'gemini_common', 'Gemini_shot', 'gpt_common', 'gpt_shot',
          'internlm_common', 'internlm_shot', 'mcmd_common', 'mcmd_shot', 'Qwen_common', 'Qwen_shot']
@@ -39,7 +39,7 @@ def evaluate(path):
             f'-level{level}',
             f'{subject}',
         ]:
-            for model in tishi:
+            for model in Model:
                 if model not in results_dict:
                     results_dict[model] = {}
                 if key not in results_dict[model]:
@@ -47,17 +47,17 @@ def evaluate(path):
                 number = get_score(content,model)
                 results_dict[model][key][0] +=  number
                 results_dict[model][key][1] += 1
-    for model in tishi:
+    for model in Model:
         for key in results_dict[model].keys():
             if results_dict[model][key][1] == 0:
                 results_dict[model][key] = f'{results_dict[model][key][0]}/{results_dict[model][key][1]}=0'
             else:
                 results_dict[model][
                     key] = f'{results_dict[model][key][0]}/{results_dict[model][key][1]}={round(results_dict[model][key][0] / max(results_dict[model][key][1], 1) , 2)}'
-    for model in tishi:
+    for model in Model:
         results_dict[model] = {key: results_dict[model][key] for key in sorted(results_dict[model].keys())}
     for i in range(12):
-        model = tishi[i]
+        model = Model[i]
         name = model_name[i]
         with open (r'./outputs/'+name+'.txt', 'w',encoding='utf-8') as f:
             for key,value in results_dict[model].items():
