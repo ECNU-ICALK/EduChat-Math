@@ -17,7 +17,7 @@ from tqdm import tqdm
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-GOOGLE_API_KEY = "请填入你的Gemini_API"
+GOOGLE_API_KEY = "AIzaSyBwu1KRwXWiLAU4GJ2CJob5iKSMII1Abns"
 genai.configure(api_key=GOOGLE_API_KEY, transport='rest')
 
 rows = []
@@ -113,7 +113,7 @@ def create_response_gemini_text(messages, model="gemini-pro", max_tokens=256, te
 
 
 def benchmark_gemini(in_path, save_path):
-    class_prompt = '请基于以下## 列表 内容，为列表选择一个合适的知识点:\n' \
+    class_prompt = '请基于以下## 题目 内容，为列表选择一个合适的知识点:\n' \
             '## 注意1. 知识点的类别只能是固定的【解析几何】【算术】【组合几何学】' \
                                              '【组合数学】【计数】【画法几何学】【图论】【逻辑题】【度量几何角】【度量几何面积】' \
                                              '【度量几何长度】【立体几何学】【统计数学】【拓扑学】【变换几何】【代数】十六个种类中的一类，' \
@@ -167,9 +167,10 @@ def benchmark_gemini(in_path, save_path):
 
         try:
             for idx, line in enumerate(tqdm(questions[BEGIN:END])):
-                if line[0] not in old_id:
-                    question = line[1:]
-                    question = f"## 列表 {question}\n"
+                if line['id'] not in old_id:
+                    question = line['question']
+                    options = line['options']
+                    question = f"## 题目 {question}\n{options}"
                     response = get_answer_from_gemini_sample_text('text', prompt, question,
                                                                  max_tokens=max_tokens, temperature=0.0)
 
