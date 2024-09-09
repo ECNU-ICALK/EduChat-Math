@@ -121,7 +121,7 @@ def benchmark_gemini(in_path, save_path):
                                              '3. 只是进行知识点分类"'
     prompt = class_prompt
 
-    model = 'gemini-1.txt.5-flash'
+    model = 'gemini-1.5-flash'
 
     max_tokens = 4096
 
