@@ -65,8 +65,3 @@ def evaluate(path):
 
 if __name__ == '__main__':
     evaluate(r'./outputs/score_model.jsonl')
-    # for root, dirs, files in os.walk(r'./outputs/'):
-    #     for file in files:
-    #         if file.endswith('.jsonl'):
-    #             fn_path = os.path.join(root, file)
-    #             evaluate(fn_path, file.replace(".jsonl",""))
