@@ -18,7 +18,8 @@ def evaluate(answer_file, save_path, file,regen_answer=False):
     options_id = get_options()                         # 测试集中的选择题题号列表
     lines = []                                                       # 存放相应题目的模型答案
     for id in options_id:
-        lines.append(id_raw1[id])
+        if id in id_raw:
+            lines.append(id_raw1[id])
     num = 0
     for line in tqdm(lines, desc='gen_correct'):
         # print(line)
