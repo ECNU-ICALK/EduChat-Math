@@ -21,7 +21,8 @@ def evaluate(answer_file, save_path, regen_answer=False):
     alld = []
     lines = []                                      # 存放相应题目的模型答案
     for id in TF_id:
-        lines.append(id_raw1[id])
+        if id in id_raw:
+            lines.append(id_raw1[id])
     num = 0
     for line in tqdm(lines, desc='gen_correct'):
         print(line)
