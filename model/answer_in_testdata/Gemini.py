@@ -200,7 +200,7 @@ def create_response_gemini(messages, model="gemini-pro-vision", max_tokens=256, 
 
 def benchmark_gemini(in_path, save_path):
 
-    benchmark_prompt = "请先一步一步地解决问题，然后将你的最终答案或一个字母(如果是选择题)放入一个\"[答案]:{}\"中。\ n"
+    benchmark_prompt = "请先一步一步地解决问题，给出最终答案,并将答案填入\"最终答案:\"中:\ n"
 
     prompt = benchmark_prompt
 
