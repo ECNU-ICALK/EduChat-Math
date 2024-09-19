@@ -31,7 +31,7 @@ def encode_image(image_path):
 def geninput(example):
     question = example['question']
     options = example['options']
-    input = '"请先一步一步地解决问题，然后将你的最终答案或一个字母(如果是选择题)放入一个\"[答案]:{}\"中。\ n"' \
+    input = '"请先一步一步地解决问题，给出最终答案,并将答案填入\"最终答案:\"中:\ n"' \
             + f'## 题目{question}\n{options}\n'
     return input
 
