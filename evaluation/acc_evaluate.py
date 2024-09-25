@@ -148,5 +148,5 @@ if __name__ == '__main__':
         for file in files:
             if file.endswith('.jsonl'):
                 fn_path = os.path.join(root, file)
-                evaluate(fn_path, fn_path, file, True)
-                math_level_subject_acc(fn_path,file)
+                evaluate(fn_path, fn_path.replace('.jsonl','_acc.jsonl'), file, True)
+                math_level_subject_acc(fn_path.replace('.jsonl','_acc.jsonl'),file)
