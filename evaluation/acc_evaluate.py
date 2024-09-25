@@ -4,18 +4,18 @@ from utils import save_jsonl, load_jsonl, find_math_answer, is_equal
 import os
 
 # id列表
-id_raw = {example['id']: example for example in load_jsonl(r"G:\python\search\github\data\test_data.jsonl")}
+id_raw = {example['id']: example for example in load_jsonl(r"./data/test_data.jsonl")}
 
 
 def get_options():
-    with open(r'G:\python\search\github\data\Question_type_index.txt', 'r', encoding='UTF-8') as file:
+    with open(r'./data/Question_type_index.txt', 'r', encoding='UTF-8') as file:
         data = json.load(file)
     options = data['选择题列表']
     return options
 
 
 def get_tf():
-    with open(r'G:\python\search\github\data\Question_type_index.txt', 'r', encoding='UTF-8') as file:
+    with open(r'./data/Question_type_index.txt', 'r', encoding='UTF-8') as file:
         data = json.load(file)
     options = data['判断题列表']
     return options
@@ -137,14 +137,14 @@ def math_level_subject_acc(answer_file,file):
 
     results_dict = {key: results_dict[key] for key in sorted(results_dict.keys())}
     print(os.path.basename(answer_file), ':\t', results_dict['-all'])
-    path = r'G:\python\search\github\evaluation\acc_evaluate/'
+    path = r'./evaluation/acc_evaluate/'
     with open(path + file.replace('.jsonl', '_result.jsonl'), 'w', encoding='utf-8') as f:
         for key, value in results_dict.items():
             f.write(json.dumps((key, value), ensure_ascii=False) + '\n')
 
 
 if __name__ == '__main__':
-    for root, dirs, files in os.walk(r'G:\python\search\github\outputs\model_answer'):
+    for root, dirs, files in os.walk(r'./outputs/model_answer'):
         for file in files:
             if file.endswith('.jsonl'):
                 fn_path = os.path.join(root, file)
