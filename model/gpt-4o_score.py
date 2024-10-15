@@ -13,10 +13,7 @@ import concurrent.futures
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 '''
-用Gpt4o对模型结果进行打分
-
-
-
+用Gpt4o对模型结果(填空题和解答题部分)进行打分,保存在./outputs/score中
 '''
 def load_jsonl(file_path) -> list:
     with open(file_path, 'r', encoding='UTF-8') as f:
@@ -107,5 +104,5 @@ if __name__ == '__main__':
         for file in files:
             if file.endswith('.jsonl'):
                 fn_path = os.path.join(root, file)
-                test(r'./data/test_data.jsonl', fn_path.replace('model_answer', 'Gpt4o_score'),
+                test(r'./data/test_data.jsonl', fn_path.replace('model_answer', 'score'),
                      fn_path, process_example)

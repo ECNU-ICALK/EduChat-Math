@@ -96,4 +96,5 @@ def test(path, output, processor, reset=False):
 
 if __name__ == '__main__':
     path = r"./data/test_data.jsonl"
-    test(path, path.replace('.jsonl','_qwenvlmax_cot_mergedimg_output.jsonl'), process_example_merged_img)
+    output = r'./outputs/qwen-vl-max.jsonl'
+    test(path, output, process_example_merged_img)

@@ -114,6 +114,6 @@ def test(path, output, processor, reset=False):
 
 if __name__ == '__main__':
     input_path = r'./data/test_data.jsonl'
-    output_path = f"{MODEL}-shot_answer.jsonl"
+    output_path = f"./outputs/{MODEL}-shot_answer.jsonl"
     test(input_path, output_path, process_example)
 

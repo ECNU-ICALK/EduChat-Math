@@ -280,6 +280,6 @@ if __name__ == '__main__':
     parser.add_argument("--in_path", type=str, help="input path of data",
                         default = r'./data/all_data.jsonl') 
     parser.add_argument("--save_path", type=str, help="save path of model outputs",
-                        default=r'./subject/gemini-shot.jsonl')
+                        default=r'./outputs/gemini_shot.jsonl')
     args = parser.parse_args()
     benchmark_gemini(in_path=args.in_path, save_path=args.save_path)
