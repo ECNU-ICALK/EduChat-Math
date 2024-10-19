@@ -28,7 +28,7 @@ Paper link: https://arxiv.org/pdf/2409.02834
 
 ### Results of Various Levels
 <p align="center">
-<img src="Level.jpg" alt="" data-canonical-src="radar_all_level.pdf" width="80%"/>
+<img src="radar_all_level.pdf" alt="" data-canonical-src="radar_all_level.pdf" width="80%"/>
 </p>
 
 ### Results of Various Subject
