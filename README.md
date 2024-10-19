@@ -33,7 +33,7 @@ Paper link: https://arxiv.org/pdf/2409.02834
 
 ### Results of Various Subject
 <p align="center">
-<img src="radar_all_level.pdf" alt="" data-canonical-src="Subject.jp" width="80%"/>
+<img src="radar_all_level.pdf" alt="" data-canonical-src="Subject.jpg" width="80%"/>
 </p>
 
 ### Results of Accuracy
