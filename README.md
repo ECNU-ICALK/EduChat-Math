@@ -39,7 +39,7 @@ Paper link: https://arxiv.org/pdf/2409.02834
 
 ### Results of Accuracy
 <p align="center">
-<img src="results_acc.jpg" alt="" data-canonical-src="results_acc.jpg" width="80%"/>
+<img src="results_acc1.jpg" alt="" data-canonical-src="results_acc1.jpg" width="80%"/>
 </p>
 
 ### Results of GPT-4o Score
