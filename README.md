@@ -44,6 +44,6 @@ Paper link: https://arxiv.org/pdf/2409.02834
 
 ### Results of GPT-4o Score
 <p align="center">
-<img src="results_gpt4o.jpg" alt="" data-canonical-src="results_gpt4o.jpg" width="80%"/>
+<img src="results_score.png" alt="" data-canonical-src="results_score.png" width="80%"/>
 </p>
 
