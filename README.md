@@ -28,18 +28,18 @@ Paper link: https://arxiv.org/pdf/2409.02834
 
 ### Results of Various Levels
 <p align="center">
-<img src="Level.jpg" alt="" data-canonical-src="Level.jpg" width="80%"/>
+<img src="Level.png" alt="" data-canonical-src="Level.png" width="80%"/>
 </p>
 
 
 ### Results of Various Subject
 <p align="center">
-<img src="Subject.jpg" alt="" data-canonical-src="Subject.jpg" width="80%"/>
+<img src="Subject.png" alt="" data-canonical-src="Subject.png" width="80%"/>
 </p>
 
 ### Results of Accuracy
 <p align="center">
-<img src="results_acc1.png" alt="" data-canonical-src="results_acc1.png" width="80%"/>
+<img src="results_acc.png" alt="" data-canonical-src="results_acc.png" width="80%"/>
 </p>
 
 ### Results of GPT-4o Score
