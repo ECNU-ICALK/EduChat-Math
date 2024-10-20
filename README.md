@@ -30,7 +30,7 @@ Paper link: https://arxiv.org/pdf/2409.02834
 <p align="center">
 <img src="Level.jpg" alt="" data-canonical-src="Level.jpg" width="80%"/>
 </p>
-![image](https://github.com/user-attachments/assets/9de3fe35-3d40-4d07-984b-a4a8f3eb0723)
+
 
 ### Results of Various Subject
 <p align="center">
